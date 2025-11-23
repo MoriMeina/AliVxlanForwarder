@@ -1,0 +1,12 @@
+[Unit]
+Description=Ali VXLAN Tunnel Forwarder Daemon
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/AliVxlanForwarder --input ens19 --output ens21
+Restart=on-failure
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
