@@ -22,6 +22,11 @@ AliVxlan Forwarder 是一款专为阿里云私网隧道（AliVxlan）流量解�
 
 ### 🎯 精准 VNI 过滤
 
+- VNI获取方式：
+vpcregiondb查询tunnel_id
+```mysql
+select tunnel_id from vpc where vpc_id ='vpc-xxxxxx'; 
+```
 - 支持配置 **单个或多个 VNI**
 - 默认模式下抓取 **全部 VNI 流量**
 - 可应用于 VPC 中转分析、多租户隔离解析等场景
