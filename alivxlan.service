@@ -3,7 +3,7 @@ Description=Ali VXLAN Tunnel Forwarder Daemon
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/AliVxlanForwarder --input ens19 --output ens21
+ExecStart=/usr/bin/AliVxlanForwarder --input ens19 --output ens21 --api-addr 0.0.0.0:8080 --log-level info
 Restart=on-failure
 User=root
 Group=root
